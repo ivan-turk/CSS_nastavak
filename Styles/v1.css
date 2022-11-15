@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: bisque;
+  font-size: 18px;
+}
+
+p {
+  background-color: darkgrey;
+  border: 5px solid black;
+  padding: 5px;
+  width: 250px;
+  height: 100px;
+}
+
+/* Pozicioniranjem elemenata izbacujemo elemente iz normalnog toka i dajemo im mogućnost da se ponašaju drugačije (preklapaju ili ostaju fiksirani na nekom drugom mjestu)
+
+Blok elementi u normalnom flow-u su raspoređeni po vertikali jedan ispod drugog bez obzira na širinu, dok su elementi reda raspoređeni jedan do drugoga */
+
+/* METODE POZICIONIRANJA: static, relative, absolute i fixed! */
+/* _________________________________________________________________________ */
+
+/* ----STATIC--- ništa se ne mjenja u dokumentu, defaultni flow */
+
+.static {
+  position: static;
+}
+
+/* ----RELATIVE--- pomicanje u odnosu na njegovu statičnu poziciju, svojstvima top, bottom, left, right --> u toku dokumenta se upamti mjesto di je on trebao stajati i na tom mjestu ne može biti niti jedan drugi element!!!! tj. ostavlja element u normalnom flow-u ali ga pomiče obzirom na zadane vrijednosti */
+
+.relative {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+/* ----ABSOLUTE---- izbacuje element iz normalnog flow-a, pozicionira ga u gornji lijevi kut prvog parenta čija pozicija NIJE statična. Ako je statična isto ga stavlja u gornji lijevi kut */
+
+.absolute {
+  position: absolute;
+  top: 400px;
+  left: 400px;
+}
+
+/* ---- FIXED ---- element je uvijek pozicioniran u odnosu na prozor browsera (viewport), uvijek ostaje fixno čak i prilikom korištenja klizne trake, ne ostavlja prazninu u toku dokumenta, izbacuje se iz toka kao i absolute! */
+
+.fixed {
+  background-color: blueviolet;
+  position: fixed;
+  top: 800px;
+  left: 800px;
+}
+
+/* ---- STICKY ---- ostaje uvijek vidljiv i kad imaš scrool... npr za navigation bar.. - zaljepi se na viewport kad ga zakačiš scrollom. U svojstva OBAVEZNO dodati "TOP" jer neće raditi!!!! */
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 10px;
+  margin: 55px;
+  font-size: 20px;
+  width: 350px;
+}
+
+/* ---- Z-INDEX PROPERTY ---- svojstvo preklapanja elemenata (kao layers) */
+
+img {
+  position: absolute;
+  left: 0px;
+  bottom: 200px;
+  z-index: -1;
+  width: 500px;
+  height: 300px;
+}
+
+footer {
+  height: 10vh;
+  background-color: rgb(152, 179, 156);
+  text-align: center;
+}
+
+button {
+  width: 100px;
+  height: 50px;
+}

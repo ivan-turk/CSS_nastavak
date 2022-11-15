@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url("../Multimedia/bg_fence.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  text-align: center;
+}
+
+.wrapper-flex {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+/* ====== 1. BACKGROUND COLOR PROPERTY WITH OPACITY ====== */
+
+.box-1 {
+  background-color: lightblue;
+  opacity: 0.7;
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+}
+
+/* ====== 2. BACKGROUND IMAGE PROPERTY ====== */
+
+.box-2 {
+  height: 300px;
+  width: 300px;
+  padding: 20px;
+  background-image: url("../Multimedia/bg_image1.jpg");
+}
+
+/* ====== 3. BACKGROUND REPEAT PROPERTY ====== 
+
+a) background-repeat: repeat; --> zadano, ponavlja se slika kroz cijeli element
+
+b) background-repeat: no-repeat; --> pozadinska slika se ne ponavlja
+
+c) background-repeat: repeat-x / repeat-y --> ponavljanje po x ili y osi
+*/
+.box-wrapper {
+  display: inline-block;
+}
+
+.box-3 {
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  max-height: 400px;
+  opacity: 1;
+  transition: all ease-in-out 0.6s;
+  background-color: #f4f5f3;
+  background-image: url("../Multimedia/bg_repeat_norepeat.jpeg");
+  background-repeat: no-repeat;
+}
+
+.box-3 > p {
+  margin: 90px;
+  padding: 39px;
+}
+
+.box-4 {
+  text-align: center;
+  height: 400px;
+  width: 400px;
+  max-height: 400px;
+  opacity: 0;
+  transition: all ease-in-out 0.6s;
+  background-color: #f4f5f3;
+  background-image: url("../Multimedia/bg_repeat_norepeat.jpeg");
+  background-repeat: repeat;
+}
+
+.box-4 {
+  max-height: 0px;
+  opacity: 0;
+}
+
+.box-wrapper:hover .box-3 {
+  max-height: 0px;
+  opacity: 0;
+}
+
+.box-wrapper:hover .box-4 {
+  max-height: 400px;
+  opacity: 1;
+}
+
+/* ====== 4. BACKGROUND POSITION PROPERTY ======
+
+a) background-position: left top; (Zadana vrijednost po X i Y)
+b) background-position: left bottom;
+c) background-position: left center;
+d) background-position: right top;
+e) background-position: right bottom;
+f) background-position: right center;
+g) background-position: center top;
+h) background-position: center bottom;
+i) background-position: center center; */
+
+/* background: background-color background-image background-position/background-size background-repeat background-attachment;  -- više svojstava odjednom, možeš stavljati i više background-a jedan na drugi */
+/* ********************************************************************** */
+
+.box-5 {
+  width: 500px;
+
+  height: 500px;
+  background-color: darkcyan;
+  background-image: url("../Multimedia/bg_repeat_norepeat.jpeg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  text-align: center;
+}
+
+/* ==== BOX - SHADOW ==== -- sjena elemenata - 4parametra;
+
+a) h-shadow --> horiz. pozicija sjene: npr 16px<br />
+      <br />
+      <br />
+      <br />
+      <br />
+b) v-shadow --> vertik. pozicija sjene: npr 12px
+c) blur-radius --> radijus zamućenja: npr 8px
+d) color --> boja sjene: npr #0000
+
+Primjer:
+
+*/
+
+button {
+  width: 100px;
+  height: 50px;
+  box-shadow: 16px 12px 16px #2b7683;
+}

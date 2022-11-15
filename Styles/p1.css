@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.box-za-sliku {
+  width: 400px;
+  height: 200px;
+  background-image: url("https://www.w3schools.com/css/paper.gif");
+}
+
+.norepeat {
+  background-repeat: no-repeat;
+}
+
+.position {
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+/* ===== 1. BACKGROUND ATTACHMENT ===== Važno! - kao position fixed ostaje uvijek u viewportu!!!! Postoje fixed i scroll */
+
+/* ===== BACKGROUND SIZE ===== - cover i contain - cover se širi dok ne prekrije cijeli element čak i pod cijenu rezanja, a contain se širi dok ne poljubi prvu dimenziju! */
+
+/* ========== OBJEDINJAVAJUĆI SHORTHAND PROPERTY BACKGROUND ==========*/
+
+/* background-color, bg-image, bg-repeat. bg-attachment, bg-position - redosljed za SHORTHAND PROPERTY -->  background: .... ... ... ... ... */
+
+#objedinjavajuci {
+  width: 600px;
+  height: 800px;
+  background: #c43737 url("https://www.w3schools.com/cssref/img_tree.gif") no-repeat right top;
+}
+
+/* Multiple backgrounds - odvaja se zarezom... shorthand do zareza cijela priča, od zareza cijela priča! */
+
+/* Origin property - content-box, padding-box, border-box - mjesto di će se slika početi iscrtavati! */
+
+/* background CLIP - di će se background iscrtavati--- content, padding, border-box */
+
+#contain {
+  width: 800px;
+  height: 400px;
+  background-color: aqua;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("https://ih1.redbubble.net/image.2482524838.2959/st,small,507x507-pad,600x600,f8f8f8.jpg");
+}
+
+#cover {
+  width: 800px;
+  height: 400px;
+  background-color: #c43737;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("https://ih1.redbubble.net/image.2482524838.2959/st,small,507x507-pad,600x600,f8f8f8.jpg");
+}
+
+/* 2. ============ TRANSFORMATION =========== */
+/* 2D transformacije - pogledaj na W3 school i predavanja 19:35h */
+
+/* Matrix 2D property */
+
+#matrix {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#myDiv1 {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: matrix(1, -0.3, 0, 1, 0, 0);
+}
+
+#myDiv2 {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: matrix(1, 0, 0.5, 1, 150, 0);
+}
+
+
+
+/* 3D Transformacije - dodaja se treća OS Y */
+/* Transform origin property - zadaješ iz koje točke sse počinje rotirati ( ne mora iz centra!) */
+
+/* 3. ============ TRANSITIONS - zanimljivo... =========== */
+
+/* Transition properties */
+/* Transition delay */
+
+/* webkit transition i transition --> webkit se stavlja zbog implementacije u browsere ako nije do kraja podržano u standardu, stoga se stavlja ovako duplo - nemoj ih stavljati osim ako dođe neki novi property stavi vendorske prefixe */
+
+/* 4. ============ ANIMATIONS =========== */
+
+/* @keyframes - riječ koja je trigger za stvaranje animacije!, definiraš ime te pravila, tada primjeniš na neki element! */
+
+/* The animation code --->ima 4 kadra!
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* The element to apply the animation to */
+/* div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}  */
+
+/* Animation SHORTHAND PROPERTY pogledaj na W3! */
+
+/* Domaći - vježbe sa padleta.... predavačevu verziju otvori u browseru, napravi svoj primjer - rekonstrukciju! te sa animacijama */

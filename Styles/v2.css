@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: bisque;
+  font-size: 18px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container-1 div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/* =========== Što je flexbox =========
+
+CSS tehnika za raspored sadržaja u jednoj dimenziji kao red ili stupac!
+
+*/
+
+.container-1 {
+  display: flex; /*postoji i inline-flex - uzme prostora ovisno o elementima unutra*/
+  /* align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+  align-items: stretch - po defaultu;
+  flex-direction: column;
+  flex-direction: row; - po defaultu */
+  /* flex-wrap: wrap; wrap / nowrap - prelazak itema u novi red ili ne */
+  /* flex-flow:column wrap - skraćeno za flex direction i flex-wrap */
+
+  flex-flow: row nowrap;
+
+  /* ==== Justify - content -> flex-start, flex-end.... za poravnavanje itema! === */
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* ====== Align-Items - poravnavanje itema po poprečnoj osi */
+
+/* =========== ITEM PRAVILA ========== */
+
+/*  a) Order - mjenjaš redosljed itema
+    b) Flex-grow - povećanje dimenzija itema po glavnoj zadanoj osi (zadana je 0)
+    c) Flex-shrink - smanjenje dimenzija itema po glavnoj zadanoj osi (zadana je 0)
+    d) Flex-basis - veličina elemenata po glavnoj osi! u px, %, em
+
+
+
+
+*/
+.box-1 {
+  order: 1;
+  /* flex-grow: 1; */
+  flex-basis: 5%;
+}
+
+.box-2 {
+  order: 2;
+  /* flex-grow: 1; */
+  flex-basis: 5%;
+}
+
+.box-3 {
+  order: 3;
+  /* flex-grow: 2; */
+  flex-basis: 5%;
+}
+
+.box-4 {
+  order: 4;
+  /* flex-grow: 1; */
+  flex-basis: 5%;
+}
+
+.box-5 {
+  order: 5;
+  /* flex-shrink: 1; */
+  flex-basis: 5%;
+}
