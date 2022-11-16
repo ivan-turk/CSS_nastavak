@@ -1,0 +1,74 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+@keyframes padaj {
+  0% {
+    top: -700px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url(/Multimedia/image_sass.webp);
+  background-size: cover;
+}
+
+div:nth-child(1) {
+  animation: padaji 2s ease-in 1;
+}
+
+@keyframes padaji {
+  0% {
+    top: -60vh;
+  }
+  100% {
+    top: 0px;
+  }
+}
+div:nth-child(2) {
+  animation: padaji 2s ease-in 3;
+}
+
+@keyframes padaji {
+  0% {
+    top: -60vh;
+  }
+  100% {
+    top: 0px;
+  }
+}
+div:nth-child(3) {
+  animation: padaji 2s ease-in 5;
+}
+
+@keyframes padaji {
+  0% {
+    top: -60vh;
+  }
+  100% {
+    top: 0px;
+  }
+}
+div {
+  padding: 8%;
+  position: relative;
+  flex-basis: 25%;
+  flex-shrink: 1;
+  flex-grow: 0;
+  font-size: 7vw;
+  color: white;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 255, 0.4);
+  text-align: center;
+}
+
+/*# sourceMappingURL=p3_sass_1.css.map */
