@@ -10,8 +10,6 @@ body {
 
 h1 {
   text-align: center;
-  padding: 20px;
-  font-weight: bold;
 }
 
 .wrapper {
@@ -23,22 +21,25 @@ h1 {
 }
 
 .box-1 {
-  flex-basis: 48%;
   border: 1px solid black;
   border-radius: 10px;
   background-color: whitesmoke;
 }
 
 .box-2 {
-  flex-basis: 48%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: whitesmoke;
+}
+
+.box-3 {
   border: 1px solid black;
   border-radius: 10px;
   background-color: whitesmoke;
 }
 
 ol {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: 20px;
+  font-size: 14px;
   padding: 20px;
   margin: 20px;
 }
@@ -46,9 +47,46 @@ ol {
 a {
   text-decoration: none;
   color: black;
-  font-weight: bold;
 }
 
 a:hover {
   background-color: coral;
+}
+
+[class*="box"] {
+  flex: 0 32%;
+  height: 430px;
+  background-color: rgb(20, 107, 110);
+}
+
+/* Uređaji manji od 1024px */
+@media screen and (max-width: 1023px) {
+  [class*="box"] {
+    flex-basis: 49%;
+    background-color: rgb(71, 150, 152);
+  }
+  .wrapper {
+    justify-content: flex-start;
+  }
+}
+
+/* Svi uređaji širine manje od 480px */
+@media screen and (max-width: 768px) {
+  [class*="box"] {
+    flex-basis: 100%;
+    height: 300px;
+    background-color: rgb(161, 213, 215);
+  }
+
+  ol {
+    font-weight: 800;
+  }
+
+  .box-2 {
+    height: fit-content;
+  }
+
+  .box-3 {
+    height: fit-content;
+  }
 }
