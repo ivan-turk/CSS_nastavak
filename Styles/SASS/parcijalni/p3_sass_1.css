@@ -4,55 +4,47 @@
   box-sizing: border-box;
 }
 
-@keyframes padaj {
-  0% {
-    top: -700px;
-  }
-  100% {
-    top: 0px;
-  }
-}
 main {
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: url(/Multimedia/image_sass.webp);
+  background-image: url("https://v1.padlet.pics/1/image.webp?t=c_limit%2Cdpr_1%2Ch_859%2Cw_1528&url=https%3A%2F%2Fpadlet-uploads.storage.googleapis.com%2F891001168%2Fe79960e75be653e107a57de088ea3859%2Fblur_clean.jpg");
   background-size: cover;
 }
 
 div:nth-child(1) {
-  animation: padaji 2s ease-in 1;
+  animation: padaji 2s ease-in 1s forwards;
 }
 
 @keyframes padaji {
   0% {
-    top: -60vh;
+    top: -100vh;
   }
   100% {
     top: 0px;
   }
 }
 div:nth-child(2) {
-  animation: padaji 2s ease-in 3;
+  animation: padaji 2s ease-in 3s forwards;
 }
 
 @keyframes padaji {
   0% {
-    top: -60vh;
+    top: -100vh;
   }
   100% {
     top: 0px;
   }
 }
 div:nth-child(3) {
-  animation: padaji 2s ease-in 5;
+  animation: padaji 2s ease-in 5s forwards;
 }
 
 @keyframes padaji {
   0% {
-    top: -60vh;
+    top: -100vh;
   }
   100% {
     top: 0px;
